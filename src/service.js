@@ -5,26 +5,26 @@ import burn from "./assets/burn.png"
 
 function Service(){
     return(
-        <div style={{backgroundColor:"white", width:"100%",display:"flex", flexDirection:"column"}}>
+        <div style={{backgroundColor:"white", width:"100%",display:"flex", flexDirection:"column", fontFamily:"Poppins"}}>
             <div style={{display:"flex", flexDirection:"column", padding:50}}>
                 <label style={{fontSize:50}}><b>Wellness in Corporate Environments</b></label>
-                <label>With Clarion's innovative solutions, businesses can effectively address and resolve the substantial challenges of stress, burnout, and dwindling employee engagement,
+                <label style={{paddingLeft:100, paddingRight:100}}>With Clarion's innovative solutions, businesses can effectively address and resolve the substantial challenges of stress, burnout, and dwindling employee engagement,
                     fostering a healthier and more productive work environment in the rapidly evolving corporate landscape.</label>
             </div>
             <div style={{display:"flex", flexDirection:"row", justifyContent:"center"}}>
-                <div style={{height:300, width:200,display:"flex", flexDirection:"column", alignItems:"flex-start", margin:50, borderRadius:30,border: '10px solid #8100BD', padding:5}}>
+                <div style={{height:300, width:200,display:"flex", flexDirection:"column", alignItems:"flex-start", margin:50, borderRadius:30,border: '10px solid #9A9AFF', padding:5}}>
                     <img  style={{height:74, width:64, alignSelf:"end"}} src={stress}/>
-                    <label style={{fontSize:50, color:"#8100BD"}}><b>89%</b></label>
+                    <label style={{fontSize:50, color:"#9A9AFF"}}><b>89%</b></label>
                     <label style={{textAlign:"left"}}>89% of Indian employees suffer from stress at work</label>
                 </div>
-                <div style={{height:300, width:200,display:"flex", flexDirection:"column", alignItems:"flex-start", margin:50, borderRadius:30,border: '10px solid #00C8A4', padding:5}}>
+                <div style={{height:300, width:200,display:"flex", flexDirection:"column", alignItems:"flex-start", margin:50, borderRadius:30,border: '10px solid #9A9AFF', padding:5}}>
                     <img  style={{height:74, width:64, alignSelf:"end"}} src={stress}/>
-                    <label style={{fontSize:50, color:"#00C8A4"}}><b>$36.4B</b></label>
+                    <label style={{fontSize:50, color:"#9A9AFF"}}><b>$36.4B</b></label>
                     <label style={{textAlign:"left"}}>Per year in employee healthcare costs due to chronic illness or risk factors leading to productivity losses.</label>
                 </div>
-                <div style={{height:300, width:200,display:"flex", flexDirection:"column", alignItems:"flex-start", margin:50, borderRadius:30,border: '10px solid #CD4A00', padding:5}}>
+                <div style={{height:300, width:200,display:"flex", flexDirection:"column", alignItems:"flex-start", margin:50, borderRadius:30,border: '10px solid #9A9AFF', padding:5}}>
                     <img  style={{height:74, width:64, alignSelf:"end"}} src={stress}/>
-                    <label style={{fontSize:50, color:"#CD4A00"}}><b>15%</b></label>
+                    <label style={{fontSize:50, color:"#9A9AFF"}}><b>15%</b></label>
                     <label style={{textAlign:"left"}}>As the pandemic puts focus on employee health, only 72 million or 15% of India’s overall workforce is covered with corporate health and wellness programs</label>
                 </div>
                 {/*<div style={{display:"flex", flexDirection:"column", alignItems:"center", margin:50}}>*/}

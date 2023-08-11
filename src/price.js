@@ -18,7 +18,7 @@ function Price(){
 
 
     return(
-        <div style={{backgroundColor:"#F9F9FF", width:"100%",display:"flex", flexDirection:"column"}}>
+        <div style={{backgroundColor:"#F9F9FF", width:"100%",display:"flex", flexDirection:"column", fontFamily:"Poppins"}}>
 
             <div style={{marginTop:60,display:"flex", flexDirection:"column",alignItems:"center"}}>
                 <label style={{fontSize:30}}>Choose the Perfect Plan for you</label>
@@ -30,13 +30,13 @@ function Price(){
                         {/*<img style={{width:250, height:450, padding:5}} src={mid}/>*/}
                         {/*<img style={{width:200, height:400, padding:5}} src={right}/>*/}
                         <div style={{backgroundColor:"#F9F9FF", margin:10}}>
-                            <div style={{display:"flex", flexDirection:"column", padding:20, textAlign:"left",backgroundColor:"white"}}>
+                            <div style={{display:"flex", flexDirection:"column", padding:30, textAlign:"left",backgroundColor:"white"}}>
                                 <label style={{fontSize:20}}><b>{'>10 Employees'}</b></label>
                                 <label style={{color:"#777777"}}>For India based</label>
                                 <label style={{color:"#777777"}}>Businesses</label>
                                 <label style={{position:"absolute",alignSelf:"end", fontSize:30}}><b>₹3500</b></label>
                             </div>
-                            <div style={{display:"flex", flexDirection:"column", padding:20, textAlign:"left", marginTop:5, marginBottom:5,backgroundColor:"white"}}>
+                            <div style={{display:"flex", flexDirection:"column", padding:30, textAlign:"left", marginTop:5, marginBottom:5,backgroundColor:"white"}}>
                                 <label style={{color:"#777777"}}>Full Access of the app and the library</label>
                                 <label style={{color:"#777777"}}>{'\u2022 Personalized muscle relaxation'}</label>
                                 <label style={{color:"#777777"}}>{'\u2022 Meditations and affirmations'}</label>
@@ -44,19 +44,19 @@ function Price(){
                                 <label style={{color:"#777777"}}>{'\u2022 Customized Daily Schedule'}</label>
                                 <label style={{color:"#777777"}}>{'\u2022 Wellness analytics and reports'}</label>
                             </div>
-                            <div style={{padding:20, alignContent:"start",backgroundColor:"white"}}>
+                            <div style={{padding:30, alignContent:"start",backgroundColor:"white"}}>
                                 <button style={{alignSelf:"end", borderWidth:0, backgroundColor:"black", color:"white", height:40, width:200}}>Purchase Plan</button>
                             </div>
 
                         </div>
                         <div style={{backgroundColor:"#F9F9FF", margin:10}}>
-                            <div style={{display:"flex", flexDirection:"column", padding:20, textAlign:"left",backgroundColor:"white"}}>
+                            <div style={{display:"flex", flexDirection:"column", padding:30, textAlign:"left",backgroundColor:"white"}}>
                                 <label style={{fontSize:20}}><b>{'>20 Employees'}</b></label>
                                 <label style={{color:"#777777"}}>For India based</label>
                                 <label style={{color:"#777777"}}>Businesses</label>
                                 <label style={{position:"absolute",alignSelf:"end", fontSize:30}}><b>₹5000</b></label>
                             </div>
-                            <div style={{display:"flex", flexDirection:"column", padding:20, textAlign:"left", marginTop:5, marginBottom:5,backgroundColor:"white"}}>
+                            <div style={{display:"flex", flexDirection:"column", padding:30, textAlign:"left", marginTop:5, marginBottom:5,backgroundColor:"white"}}>
                                 <label style={{color:"#777777"}}>Full Access of the app and the library</label>
                                 <label style={{color:"#777777"}}>{'\u2022 Personalized muscle relaxation'}</label>
                                 <label style={{color:"#777777"}}>{'\u2022 Meditations and affirmations'}</label>
@@ -64,19 +64,19 @@ function Price(){
                                 <label style={{color:"#777777"}}>{'\u2022 Customized Daily Schedule'}</label>
                                 <label style={{color:"#777777"}}>{'\u2022 Wellness analytics and reports'}</label>
                             </div>
-                            <div style={{padding:20, alignContent:"start",backgroundColor:"white"}}>
+                            <div style={{padding:30, alignContent:"start",backgroundColor:"white"}}>
                                 <button style={{alignSelf:"end", borderWidth:0, backgroundColor:"black", color:"white", height:40, width:200}}>Purchase Plan</button>
                             </div>
 
                         </div>
                         <div style={{backgroundColor:"#F9F9FF", margin:10}}>
-                            <div style={{display:"flex", flexDirection:"column", padding:20, textAlign:"left",backgroundColor:"white"}}>
+                            <div style={{display:"flex", flexDirection:"column", padding:30, textAlign:"left",backgroundColor:"white"}}>
                                 <label style={{fontSize:20}}><b>{'>35 Employees'}</b></label>
                                 <label style={{color:"#777777"}}>For India based</label>
                                 <label style={{color:"#777777"}}>Businesses</label>
                                 <label style={{position:"absolute",alignSelf:"end", fontSize:30}}><b>₹7500</b></label>
                             </div>
-                            <div style={{display:"flex", flexDirection:"column", padding:20, textAlign:"left", marginTop:5, marginBottom:5,backgroundColor:"white"}}>
+                            <div style={{display:"flex", flexDirection:"column", padding:30, textAlign:"left", marginTop:5, marginBottom:5,backgroundColor:"white"}}>
                                 <label style={{color:"#777777"}}>Full Access of the app and the library</label>
                                 <label style={{color:"#777777"}}>{'\u2022 Personalized muscle relaxation'}</label>
                                 <label style={{color:"#777777"}}>{'\u2022 Meditations and affirmations'}</label>
@@ -84,7 +84,7 @@ function Price(){
                                 <label style={{color:"#777777"}}>{'\u2022 Customized Daily Schedule'}</label>
                                 <label style={{color:"#777777"}}>{'\u2022 Wellness analytics and reports'}</label>
                             </div>
-                            <div style={{padding:20, alignContent:"start",backgroundColor:"white"}}>
+                            <div style={{padding:30, alignContent:"start",backgroundColor:"white"}}>
                                 <button style={{alignSelf:"end", borderWidth:0, backgroundColor:"black", color:"white", height:40, width:200}}>Purchase Plan</button>
                             </div>
 
@@ -96,13 +96,13 @@ function Price(){
                 {/*<img style={{width:250, height:450, padding:5}} src={mid}/>*/}
                 {/*<img style={{width:200, height:400, padding:5}} src={right}/>*/}
                     <div style={{backgroundColor:"#F9F9FF", margin:10}}>
-                    <div style={{display:"flex", flexDirection:"column", padding:20, textAlign:"left",backgroundColor:"white"}}>
+                    <div style={{display:"flex", flexDirection:"column", padding:30, textAlign:"left",backgroundColor:"white"}}>
                     <label style={{fontSize:20}}><b>{'>10 Employees'}</b></label>
                     <label style={{color:"#777777"}}>For India based</label>
                     <label style={{color:"#777777"}}>Businesses</label>
                     <label style={{position:"absolute",alignSelf:"end", fontSize:30}}><b>₹10000</b></label>
                     </div>
-                    <div style={{display:"flex", flexDirection:"column", padding:20, textAlign:"left", marginTop:5, marginBottom:5,backgroundColor:"white"}}>
+                    <div style={{display:"flex", flexDirection:"column", padding:30, textAlign:"left", marginTop:5, marginBottom:5,backgroundColor:"white"}}>
                     <label style={{color:"#777777"}}>Full Access of the app and the library</label>
                     <label style={{color:"#777777"}}>{'\u2022 Personalized muscle relaxation'}</label>
                     <label style={{color:"#777777"}}>{'\u2022 Meditations and affirmations'}</label>
@@ -110,19 +110,19 @@ function Price(){
                     <label style={{color:"#777777"}}>{'\u2022 Customized Daily Schedule'}</label>
                     <label style={{color:"#777777"}}>{'\u2022 Wellness analytics and reports'}</label>
                     </div>
-                    <div style={{padding:20, alignContent:"start",backgroundColor:"white"}}>
+                    <div style={{padding:30, alignContent:"start",backgroundColor:"white"}}>
                     <button style={{alignSelf:"end", borderWidth:0, backgroundColor:"black", color:"white", height:40, width:200}}>Purchase Plan</button>
                     </div>
 
                     </div>
                     <div style={{backgroundColor:"#F9F9FF", margin:10}}>
-                    <div style={{display:"flex", flexDirection:"column", padding:20, textAlign:"left",backgroundColor:"white"}}>
+                    <div style={{display:"flex", flexDirection:"column", padding:30, textAlign:"left",backgroundColor:"white"}}>
                     <label style={{fontSize:20}}><b>{'>20 Employees'}</b></label>
                     <label style={{color:"#777777"}}>For India based</label>
                     <label style={{color:"#777777"}}>Businesses</label>
                     <label style={{position:"absolute",alignSelf:"end", fontSize:30}}><b>₹13125</b></label>
                     </div>
-                    <div style={{display:"flex", flexDirection:"column", padding:20, textAlign:"left", marginTop:5, marginBottom:5,backgroundColor:"white"}}>
+                    <div style={{display:"flex", flexDirection:"column", padding:30, textAlign:"left", marginTop:5, marginBottom:5,backgroundColor:"white"}}>
                     <label style={{color:"#777777"}}>Full Access of the app and the library</label>
                     <label style={{color:"#777777"}}>{'\u2022 Personalized muscle relaxation'}</label>
                     <label style={{color:"#777777"}}>{'\u2022 Meditations and affirmations'}</label>
@@ -130,19 +130,19 @@ function Price(){
                     <label style={{color:"#777777"}}>{'\u2022 Customized Daily Schedule'}</label>
                     <label style={{color:"#777777"}}>{'\u2022 Wellness analytics and reports'}</label>
                     </div>
-                    <div style={{padding:20, alignContent:"start",backgroundColor:"white"}}>
+                    <div style={{padding:30, alignContent:"start",backgroundColor:"white"}}>
                     <button style={{alignSelf:"end", borderWidth:0, backgroundColor:"black", color:"white", height:40, width:200}}>Purchase Plan</button>
                     </div>
 
                     </div>
                     <div style={{backgroundColor:"#F9F9FF", margin:10}}>
-                    <div style={{display:"flex", flexDirection:"column", padding:20, textAlign:"left",backgroundColor:"white"}}>
+                    <div style={{display:"flex", flexDirection:"column", padding:30, textAlign:"left",backgroundColor:"white"}}>
                     <label style={{fontSize:20}}><b>{'>35 Employees'}</b></label>
                     <label style={{color:"#777777"}}>For India based</label>
                     <label style={{color:"#777777"}}>Businesses</label>
                     <label style={{position:"absolute",alignSelf:"end", fontSize:30}}><b>₹15000</b></label>
                     </div>
-                    <div style={{display:"flex", flexDirection:"column", padding:20, textAlign:"left", marginTop:5, marginBottom:5,backgroundColor:"white"}}>
+                    <div style={{display:"flex", flexDirection:"column", padding:30, textAlign:"left", marginTop:5, marginBottom:5,backgroundColor:"white"}}>
                     <label style={{color:"#777777"}}>Full Access of the app and the library</label>
                     <label style={{color:"#777777"}}>{'\u2022 Personalized muscle relaxation'}</label>
                     <label style={{color:"#777777"}}>{'\u2022 Meditations and affirmations'}</label>
@@ -150,7 +150,7 @@ function Price(){
                     <label style={{color:"#777777"}}>{'\u2022 Customized Daily Schedule'}</label>
                     <label style={{color:"#777777"}}>{'\u2022 Wellness analytics and reports'}</label>
                     </div>
-                    <div style={{padding:20, alignContent:"start",backgroundColor:"white"}}>
+                    <div style={{padding:30, alignContent:"start",backgroundColor:"white"}}>
                     <button style={{alignSelf:"end", borderWidth:0, backgroundColor:"black", color:"white", height:40, width:200}}>Purchase Plan</button>
                     </div>
 

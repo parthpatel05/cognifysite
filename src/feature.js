@@ -72,12 +72,12 @@ function Feature(){
     }
 
     return(
-        <div style={{ backgroundColor:"white", width:"100%",display:"flex", flexDirection:"column"}}>
+        <div style={{ backgroundColor:"#F9F9FF", width:"100%",display:"flex", flexDirection:"column", fontFamily:"Poppins "}}>
             <div style={{display:"flex", flexDirection:"column", padding:50}}>
                 <label style={{fontSize:50}}><b>Some Features that Made us Unique</b></label>
             </div>
             <div style={{display:"flex", flexDirection:"row", justifyContent:"center"}}>
-                <div style={{display:"flex", flexDirection:"column", alignItems:"center", margin:10, height:150,width:380, backgroundColor:hoverMed?"#9A9AFF":"#F9F9FF",paddingTop:5}}
+                <div style={{display:"flex", flexDirection:"column", alignItems:"center", margin:10, height:150,width:380, backgroundColor:hoverMed?"#9A9AFF":"white",paddingTop:5}}
                      onMouseEnter={() => {setHoverMed(true)}}
                      onMouseLeave={() => {setHoverMed(false)}}
                      onClick={() => {medButton()}}
@@ -85,7 +85,7 @@ function Feature(){
                     <img  style={{height:74, width:64, padding:10}} src={med}/>
                     <label style={{padding:10}}><b>Personalized Meditation</b></label>
                 </div>
-                <div style={{display:"flex", flexDirection:"column", alignItems:"center", margin:10, height:150,width:380, backgroundColor:hoverJour?"#9A9AFF":"#F9F9FF",paddingTop:5}}
+                <div style={{display:"flex", flexDirection:"column", alignItems:"center", margin:10, height:150,width:380, backgroundColor:hoverJour?"#9A9AFF":"white",paddingTop:5}}
                      onMouseEnter={() => {setHoverJour(true)}}
                      onMouseLeave={() => {setHoverJour(false)}}
                      onClick={() => {jourButton()}}
@@ -93,7 +93,7 @@ function Feature(){
                     <img  style={{height:74, width:64, padding:10}} src={journal}/>
                     <label style={{padding:10}}><b>Journaling</b></label>
                 </div>
-                <div style={{display:"flex", flexDirection:"column", alignItems:"center", margin:10, height:150,width:380, backgroundColor:hoverBreak?"#9A9AFF":"#F9F9FF",paddingTop:5}}
+                <div style={{display:"flex", flexDirection:"column", alignItems:"center", margin:10, height:150,width:380, backgroundColor:hoverBreak?"#9A9AFF":"white",paddingTop:5}}
                      onMouseEnter={() => {setHoverBreak(true)}}
                      onMouseLeave={() => {setHoverBreak(false)}}
                      onClick={() => {brkButton()}}
@@ -103,7 +103,7 @@ function Feature(){
                 </div>
             </div>
             <div style={{display:"flex", flexDirection:"row", justifyContent:"center"}}>
-                <div style={{display:"flex", flexDirection:"column", alignItems:"center", margin:10, height:150,width:380, backgroundColor:hoverAna?"#9A9AFF":"#F9F9FF",paddingTop:5}}
+                <div style={{display:"flex", flexDirection:"column", alignItems:"center", margin:10, height:150,width:380, backgroundColor:hoverAna?"#9A9AFF":"white",paddingTop:5}}
                      onMouseEnter={() => {setHoverAna(true)}}
                      onMouseLeave={() => {setHoverAna(false)}}
                     onClick={() => {anaButton()}}
@@ -111,7 +111,7 @@ function Feature(){
                     <img  style={{height:74, width:64, padding:10}} src={ana}/>
                     <label style={{padding:10}}><b>Analytics</b></label>
                 </div>
-                <div style={{display:"flex", flexDirection:"column", alignItems:"center", margin:10, height:150,width:380, backgroundColor:hoverSch?"#9A9AFF":"#F9F9FF",paddingTop:5}}
+                <div style={{display:"flex", flexDirection:"column", alignItems:"center", margin:10, height:150,width:380, backgroundColor:hoverSch?"#9A9AFF":"white",paddingTop:5}}
                      onMouseEnter={() => {setHoverSch(true)}}
                      onMouseLeave={() => {setHoverSch(false)}}
                     onClick={() => {schButton()}}
@@ -119,7 +119,7 @@ function Feature(){
                     <img  style={{height:74, width:64, padding:10}} src={sch}/>
                     <label style={{padding:10}}><b>Scheduling</b></label>
                 </div>
-                <div style={{display:"flex", flexDirection:"column", alignItems:"center", margin:10, height:150,width:380, backgroundColor:hoverDesk?"#9A9AFF":"#F9F9FF",paddingTop:5}}
+                <div style={{display:"flex", flexDirection:"column", alignItems:"center", margin:10, height:150,width:380, backgroundColor:hoverDesk?"#9A9AFF":"white",paddingTop:5}}
                      onMouseEnter={() => {setHoverDesk(true)}}
                      onMouseLeave={() => {setHoverDesk(false)}}
                      onClick={() => {exButton()}}

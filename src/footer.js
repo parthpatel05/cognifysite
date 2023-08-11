@@ -9,7 +9,7 @@ import be from "./assets/be.png"
 function Footer() {
 
     return (
-        <div className="home" style={{width:"100%"}}>
+        <div className="home" style={{width:"100%", fontFamily:"Poppins"}}>
             <div style={{padding:50, backgroundColor:"#9A9AFF", display:"flex", flexDirection:"column"}}>
                 <label style={{fontSize:50, color:"white"}}><b>Download This App Today!</b></label>
                 <label style={{color:"white", margin:30}}>With Clarion's innovative solutions, businesses can effectively address and resolve the substantial challenges of stress, burnout, and dwindling employee engagement,

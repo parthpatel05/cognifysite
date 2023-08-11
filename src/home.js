@@ -12,7 +12,7 @@ function Home() {
     const [hoverLearn, setLearn] = useState(false);
 
     return (
-        <div className="home" style={{width:"100%"}}>
+        <div className="home" style={{width:"100%", fontFamily:"Poppins "}}>
             <div style={{backgroundColor:"white", height:80}}>
                 <img style={{position:"absolute",left:20}} src={logo}/>
                 <div style={{position:"absolute", top:20, right:50, display:"flex", flexDirection:"row"}}>
@@ -38,7 +38,7 @@ function Home() {
 
             </div>
             <div style={{width:"100%", backgroundColor:"#9A9AFF", height:800, display:"flex", flexDirection:"row", justifyContent:"center", alignItems:"center"}}>
-                <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", width:540}}>
+                <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", width:540, textAlign:"left"}}>
                     <label style={{color:"white", fontSize:50}}>
                         <b>Wellness</b>
                     </label>
