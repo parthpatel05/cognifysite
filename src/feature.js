@@ -1,5 +1,5 @@
 import stress from "./assets/stress.png"
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
 import med from "./assets/meditation 1.png"
 import journal from "./assets/journal 1.png"
 import brk from "./assets/breaks.png"
@@ -8,6 +8,8 @@ import sch from "./assets/schedule 1.png"
 import desk from "./assets/desk.png"
 import up from "./assets/up.png"
 import down from "./assets/down.png"
+import { v4 as uuidv4 } from "uuid";
+import Carousel from "./Carousel";
 
 
 function Feature(){
@@ -17,138 +19,56 @@ function Feature(){
     const [hoverAna, setHoverAna] = useState(false);
     const [hoverSch, setHoverSch] = useState(false);
     const [hoverDesk, setHoverDesk] = useState(false);
-    const [feature, setFeature] = useState(2);
-    const [left, setLeft] = useState(require("./assets/1.png"));
-    const [mid, setMid] = useState(require("./assets/2.png"));
-    const [right, setRight] = useState(require("./assets/3.png"));
+    const [goToSlide, setGoToSlide] = useState(null);
 
-    function nextFeature() {
-        if (feature === 1){
-            // console.log("in 1")
-            setFeature(2)
-            setLeft(require("./assets/1.png"))
-            setMid(require("./assets/2.png"))
-            setRight(require("./assets/3.png"))
-        }else if (feature === 2){
-            // console.log("in 2")
-            setFeature(3)
-            setLeft(require("./assets/2.png"))
-            setMid(require("./assets/3.png"))
-            setRight(require("./assets/4.png"))
-        }else if (feature === 3){
-            // console.log("in 3")
-            setFeature(4)
-            setLeft(require("./assets/3.png"))
-            setMid(require("./assets/4.png"))
-            setRight(require("./assets/5.png"))
-        }else if (feature === 4){
-            // console.log("in 4")
-            setFeature(5)
-            setLeft(require("./assets/4.png"))
-            setMid(require("./assets/5.png"))
-            setRight(require("./assets/6.png"))
-        }else if (feature === 5){
-            // console.log("in 5")
-            setFeature(6)
-            setLeft(require("./assets/5.png"))
-            setMid(require("./assets/6.png"))
-            setRight(require("./assets/7.png"))
-        }else if (feature === 6){
-            // console.log("in 6")
-            setFeature(7)
-            setLeft(require("./assets/6.png"))
-            setMid(require("./assets/7.png"))
-            setRight(require("./assets/1.png"))
-        }else if (feature === 7){
-            // console.log("in 7")
-            setFeature(1)
-            setLeft(require("./assets/7.png"))
-            setMid(require("./assets/1.png"))
-            setRight(require("./assets/2.png"))
+    const slides = [
+        {
+            key: uuidv4(),
+            content: <img style={{width:200, height:400}} src={require("./assets/1.png")} alt="1" />
+        },
+        {
+            key: uuidv4(),
+            content: <img style={{width:200, height:400}} src={require("./assets/2.png")} alt="2" />
+        },
+        {
+            key: uuidv4(),
+            content: <img style={{width:200, height:400}} src={require("./assets/3.png")} alt="3" />
+        },
+        {
+            key: uuidv4(),
+            content: <img style={{width:200, height:400}} src={require("./assets/4.png")} alt="4" />
+        },
+        {
+            key: uuidv4(),
+            content: <img style={{width:200, height:400}} src={require("./assets/5.png")} alt="5" />
+        },
+        {
+            key: uuidv4(),
+            content: <img style={{width:200, height:400}} src={require("./assets/6.png")} alt="6" />
+        },
+        {
+            key: uuidv4(),
+            content: <img style={{width:200, height:400}} src={require("./assets/7.png")} alt="7" />
         }
-        console.log(feature)
-    }
+    ];
 
-    function prevFeature() {
-        if (feature === 1){
-            // console.log("in 1")
-            setFeature(7)
-            setLeft(require("./assets/6.png"))
-            setMid(require("./assets/7.png"))
-            setRight(require("./assets/1.png"))
-        }else if (feature === 2){
-            // console.log("in 2")
-            setFeature(1)
-            setLeft(require("./assets/7.png"))
-            setMid(require("./assets/1.png"))
-            setRight(require("./assets/2.png"))
-        }else if (feature === 3){
-            // console.log("in 3")
-            setFeature(2)
-            setLeft(require("./assets/1.png"))
-            setMid(require("./assets/2.png"))
-            setRight(require("./assets/3.png"))
-        }else if (feature === 4){
-            // console.log("in 4")
-            setFeature(3)
-            setLeft(require("./assets/2.png"))
-            setMid(require("./assets/3.png"))
-            setRight(require("./assets/4.png"))
-        }else if (feature === 5){
-            // console.log("in 5")
-            setFeature(4)
-            setLeft(require("./assets/3.png"))
-            setMid(require("./assets/4.png"))
-            setRight(require("./assets/5.png"))
-        }else if (feature === 6){
-            // console.log("in 6")
-            setFeature(5)
-            setLeft(require("./assets/4.png"))
-            setMid(require("./assets/5.png"))
-            setRight(require("./assets/6.png"))
-        }else if (feature === 7){
-            setFeature(6)
-            setLeft(require("./assets/5.png"))
-            setMid(require("./assets/6.png"))
-            setRight(require("./assets/7.png"))
-        }
-        console.log(feature)
-    }
     function medButton(){
-        setFeature(3)
-        setLeft(require("./assets/2.png"))
-        setMid(require("./assets/3.png"))
-        setRight(require("./assets/4.png"))
+        setGoToSlide(2)
     }
     function jourButton(){
-        setFeature(4)
-        setLeft(require("./assets/3.png"))
-        setMid(require("./assets/4.png"))
-        setRight(require("./assets/5.png"))
+        setGoToSlide(3)
     }
     function brkButton(){
-        setFeature(6)
-        setLeft(require("./assets/5.png"))
-        setMid(require("./assets/6.png"))
-        setRight(require("./assets/7.png"))
+        setGoToSlide(5)
     }
     function anaButton(){
-        setFeature(1)
-        setLeft(require("./assets/7.png"))
-        setMid(require("./assets/1.png"))
-        setRight(require("./assets/2.png"))
+        setGoToSlide(0)
     }
     function schButton(){
-        setFeature(2)
-        setLeft(require("./assets/1.png"))
-        setMid(require("./assets/2.png"))
-        setRight(require("./assets/3.png"))
+        setGoToSlide(1)
     }
     function exButton(){
-        setFeature(5)
-        setLeft(require("./assets/4.png"))
-        setMid(require("./assets/5.png"))
-        setRight(require("./assets/6.png"))
+        setGoToSlide(4)
     }
 
     return(
@@ -212,21 +132,16 @@ function Feature(){
                 <label style={{fontSize:30}}>Our Features Showcased</label>
                 <label>Who are in extremely love with eco friendly system.</label>
 
-                <div style={{marginBottom:50,display:"flex", flexDirection:"row"}}>
-                    <div style={{display:"flex", flexDirection:"row", alignItems:"center", paddingTop:20}}>
-                            <img style={{width:200, height:400, padding:5}} src={left}/>
-                            <img style={{width:250, height:450, padding:5}} src={mid}/>
-                            <img style={{width:200, height:400, padding:5}} src={right}/>
-                        </div>
-                    <div style={{height:50, width:20, backgroundColor:"red", position:"relative", right:-100, top:200,display:"flex", flexDirection:"column",}}>
-                        <button style={{height:25, borderWidth:1, backgroundColor:"white", justifyContent:"center"}} onClick={() => {nextFeature()}}>
-                            <label style={{fontSize:14}}>^</label>
-                        </button>
-                        <button style={{height:25, borderWidth:1, backgroundColor:"white", justifyContent:"center"}} onClick={() => {prevFeature()}}>
-                            <label style={{fontSize:8}}>V</label>
-                        </button>
-                    </div>
-                </div>
+                <Carousel
+                    cards={slides}
+                    height="500px"
+                    width="30%"
+                    margin="0 auto"
+                    offset={2}
+                    showArrows={false}
+                    slide={goToSlide}
+                />
+
 
             </div>
         </div>
