@@ -1,4 +1,5 @@
 
+import Popup from 'reactjs-popup';
 import useScrollSnap from "react-use-scroll-snap";
 import stress from "./assets/stress.png"
 import { useState,useRef } from 'react';
@@ -10,10 +11,19 @@ import sch from "./assets/schedule 1.png"
 import desk from "./assets/desk.png"
 import up from "./assets/up.png"
 import down from "./assets/down.png"
+import PurchaseModal from "./purchasemodal";
 
 function Price(){
     const [feature, setFeature] = useState(true);
 
+    const [modalOpen, setModalOpen] = useState(false);
+    const openModal = () => {
+        setModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setModalOpen(false);
+    };
 
 
 
@@ -45,7 +55,8 @@ function Price(){
                                 <label style={{color:"#777777"}}>{'\u2022 Wellness analytics and reports'}</label>
                             </div>
                             <div style={{padding:30, alignContent:"start",backgroundColor:"white"}}>
-                                <button style={{alignSelf:"end", borderWidth:0, backgroundColor:"black", color:"white", height:40, width:200}}>Purchase Plan</button>
+                                {/*<button style={{alignSelf:"end", borderWidth:0, backgroundColor:"black", color:"white", height:40, width:200}}>Purchase Plan</button>*/}
+                                <PurchaseModal plan="1"></PurchaseModal>
                             </div>
 
                         </div>
@@ -65,7 +76,8 @@ function Price(){
                                 <label style={{color:"#777777"}}>{'\u2022 Wellness analytics and reports'}</label>
                             </div>
                             <div style={{padding:30, alignContent:"start",backgroundColor:"white"}}>
-                                <button style={{alignSelf:"end", borderWidth:0, backgroundColor:"black", color:"white", height:40, width:200}}>Purchase Plan</button>
+                                {/*<button style={{alignSelf:"end", borderWidth:0, backgroundColor:"black", color:"white", height:40, width:200}}>Purchase Plan</button>*/}
+                                <PurchaseModal plan="2"></PurchaseModal>
                             </div>
 
                         </div>
@@ -85,7 +97,8 @@ function Price(){
                                 <label style={{color:"#777777"}}>{'\u2022 Wellness analytics and reports'}</label>
                             </div>
                             <div style={{padding:30, alignContent:"start",backgroundColor:"white"}}>
-                                <button style={{alignSelf:"end", borderWidth:0, backgroundColor:"black", color:"white", height:40, width:200}}>Purchase Plan</button>
+                                {/*<button style={{alignSelf:"end", borderWidth:0, backgroundColor:"black", color:"white", height:40, width:200}}>Purchase Plan</button>*/}
+                                <PurchaseModal plan="3"></PurchaseModal>
                             </div>
 
                         </div>
@@ -97,61 +110,64 @@ function Price(){
                 {/*<img style={{width:200, height:400, padding:5}} src={right}/>*/}
                     <div style={{backgroundColor:"#F9F9FF", margin:10}}>
                     <div style={{display:"flex", flexDirection:"column", padding:30, textAlign:"left",backgroundColor:"white"}}>
-                    <label style={{fontSize:20}}><b>{'>10 Employees'}</b></label>
-                    <label style={{color:"#777777"}}>For India based</label>
-                    <label style={{color:"#777777"}}>Businesses</label>
-                    <label style={{position:"absolute",alignSelf:"end", fontSize:30}}><b>₹10000</b></label>
+                        <label style={{fontSize:20}}><b>{'>10 Employees'}</b></label>
+                        <label style={{color:"#777777"}}>For India based</label>
+                        <label style={{color:"#777777"}}>Businesses</label>
+                        <label style={{position:"absolute",alignSelf:"end", fontSize:30}}><b>₹10000</b></label>
                     </div>
                     <div style={{display:"flex", flexDirection:"column", padding:30, textAlign:"left", marginTop:5, marginBottom:5,backgroundColor:"white"}}>
-                    <label style={{color:"#777777"}}>Full Access of the app and the library</label>
-                    <label style={{color:"#777777"}}>{'\u2022 Personalized muscle relaxation'}</label>
-                    <label style={{color:"#777777"}}>{'\u2022 Meditations and affirmations'}</label>
-                    <label style={{color:"#777777"}}>{'\u2022 Fitness content'}</label>
-                    <label style={{color:"#777777"}}>{'\u2022 Customized Daily Schedule'}</label>
-                    <label style={{color:"#777777"}}>{'\u2022 Wellness analytics and reports'}</label>
+                        <label style={{color:"#777777"}}>Full Access of the app and the library</label>
+                        <label style={{color:"#777777"}}>{'\u2022 Personalized muscle relaxation'}</label>
+                        <label style={{color:"#777777"}}>{'\u2022 Meditations and affirmations'}</label>
+                        <label style={{color:"#777777"}}>{'\u2022 Fitness content'}</label>
+                        <label style={{color:"#777777"}}>{'\u2022 Customized Daily Schedule'}</label>
+                        <label style={{color:"#777777"}}>{'\u2022 Wellness analytics and reports'}</label>
                     </div>
                     <div style={{padding:30, alignContent:"start",backgroundColor:"white"}}>
-                    <button style={{alignSelf:"end", borderWidth:0, backgroundColor:"black", color:"white", height:40, width:200}}>Purchase Plan</button>
+                        {/*<button style={{alignSelf:"end", borderWidth:0, backgroundColor:"black", color:"white", height:40, width:200}}>Purchase Plan</button>*/}
+                        <PurchaseModal plan="4"></PurchaseModal>
                     </div>
 
                     </div>
                     <div style={{backgroundColor:"#F9F9FF", margin:10}}>
                     <div style={{display:"flex", flexDirection:"column", padding:30, textAlign:"left",backgroundColor:"white"}}>
-                    <label style={{fontSize:20}}><b>{'>20 Employees'}</b></label>
-                    <label style={{color:"#777777"}}>For India based</label>
-                    <label style={{color:"#777777"}}>Businesses</label>
-                    <label style={{position:"absolute",alignSelf:"end", fontSize:30}}><b>₹13125</b></label>
+                        <label style={{fontSize:20}}><b>{'>20 Employees'}</b></label>
+                        <label style={{color:"#777777"}}>For India based</label>
+                        <label style={{color:"#777777"}}>Businesses</label>
+                        <label style={{position:"absolute",alignSelf:"end", fontSize:30}}><b>₹13125</b></label>
                     </div>
                     <div style={{display:"flex", flexDirection:"column", padding:30, textAlign:"left", marginTop:5, marginBottom:5,backgroundColor:"white"}}>
-                    <label style={{color:"#777777"}}>Full Access of the app and the library</label>
-                    <label style={{color:"#777777"}}>{'\u2022 Personalized muscle relaxation'}</label>
-                    <label style={{color:"#777777"}}>{'\u2022 Meditations and affirmations'}</label>
-                    <label style={{color:"#777777"}}>{'\u2022 Fitness content'}</label>
-                    <label style={{color:"#777777"}}>{'\u2022 Customized Daily Schedule'}</label>
-                    <label style={{color:"#777777"}}>{'\u2022 Wellness analytics and reports'}</label>
+                        <label style={{color:"#777777"}}>Full Access of the app and the library</label>
+                        <label style={{color:"#777777"}}>{'\u2022 Personalized muscle relaxation'}</label>
+                        <label style={{color:"#777777"}}>{'\u2022 Meditations and affirmations'}</label>
+                        <label style={{color:"#777777"}}>{'\u2022 Fitness content'}</label>
+                        <label style={{color:"#777777"}}>{'\u2022 Customized Daily Schedule'}</label>
+                        <label style={{color:"#777777"}}>{'\u2022 Wellness analytics and reports'}</label>
                     </div>
                     <div style={{padding:30, alignContent:"start",backgroundColor:"white"}}>
-                    <button style={{alignSelf:"end", borderWidth:0, backgroundColor:"black", color:"white", height:40, width:200}}>Purchase Plan</button>
+                        {/*<button style={{alignSelf:"end", borderWidth:0, backgroundColor:"black", color:"white", height:40, width:200}}>Purchase Plan</button>*/}
+                        <PurchaseModal plan="5"></PurchaseModal>
                     </div>
 
                     </div>
                     <div style={{backgroundColor:"#F9F9FF", margin:10}}>
                     <div style={{display:"flex", flexDirection:"column", padding:30, textAlign:"left",backgroundColor:"white"}}>
-                    <label style={{fontSize:20}}><b>{'>35 Employees'}</b></label>
-                    <label style={{color:"#777777"}}>For India based</label>
-                    <label style={{color:"#777777"}}>Businesses</label>
-                    <label style={{position:"absolute",alignSelf:"end", fontSize:30}}><b>₹15000</b></label>
+                        <label style={{fontSize:20}}><b>{'>35 Employees'}</b></label>
+                        <label style={{color:"#777777"}}>For India based</label>
+                        <label style={{color:"#777777"}}>Businesses</label>
+                        <label style={{position:"absolute",alignSelf:"end", fontSize:30}}><b>₹15000</b></label>
                     </div>
                     <div style={{display:"flex", flexDirection:"column", padding:30, textAlign:"left", marginTop:5, marginBottom:5,backgroundColor:"white"}}>
-                    <label style={{color:"#777777"}}>Full Access of the app and the library</label>
-                    <label style={{color:"#777777"}}>{'\u2022 Personalized muscle relaxation'}</label>
-                    <label style={{color:"#777777"}}>{'\u2022 Meditations and affirmations'}</label>
-                    <label style={{color:"#777777"}}>{'\u2022 Fitness content'}</label>
-                    <label style={{color:"#777777"}}>{'\u2022 Customized Daily Schedule'}</label>
-                    <label style={{color:"#777777"}}>{'\u2022 Wellness analytics and reports'}</label>
+                        <label style={{color:"#777777"}}>Full Access of the app and the library</label>
+                        <label style={{color:"#777777"}}>{'\u2022 Personalized muscle relaxation'}</label>
+                        <label style={{color:"#777777"}}>{'\u2022 Meditations and affirmations'}</label>
+                        <label style={{color:"#777777"}}>{'\u2022 Fitness content'}</label>
+                        <label style={{color:"#777777"}}>{'\u2022 Customized Daily Schedule'}</label>
+                        <label style={{color:"#777777"}}>{'\u2022 Wellness analytics and reports'}</label>
                     </div>
                     <div style={{padding:30, alignContent:"start",backgroundColor:"white"}}>
-                    <button style={{alignSelf:"end", borderWidth:0, backgroundColor:"black", color:"white", height:40, width:200}}>Purchase Plan</button>
+                        {/*<button style={{alignSelf:"end", borderWidth:0, backgroundColor:"black", color:"white", height:40, width:200}}>Purchase Plan</button>*/}
+                        <PurchaseModal plan="6"></PurchaseModal>
                     </div>
 
                     </div>
@@ -167,6 +183,8 @@ function Price(){
                     </div>
 
             </div>
+            {/*<PurchaseModal plan="hello">*/}
+            {/*</PurchaseModal>*/}
         </div>
     )
 }

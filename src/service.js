@@ -18,12 +18,12 @@ function Service(){
                     <label style={{textAlign:"left"}}>89% of Indian employees suffer from stress at work</label>
                 </div>
                 <div style={{height:300, width:200,display:"flex", flexDirection:"column", alignItems:"flex-start", margin:50, borderRadius:30,border: '10px solid #9A9AFF', padding:5}}>
-                    <img  style={{height:74, width:64, alignSelf:"end"}} src={stress}/>
+                    <img  style={{height:74, width:64, alignSelf:"end"}} src={prod}/>
                     <label style={{fontSize:50, color:"#9A9AFF"}}><b>$36.4B</b></label>
                     <label style={{textAlign:"left"}}>Per year in employee healthcare costs due to chronic illness or risk factors leading to productivity losses.</label>
                 </div>
                 <div style={{height:300, width:200,display:"flex", flexDirection:"column", alignItems:"flex-start", margin:50, borderRadius:30,border: '10px solid #9A9AFF', padding:5}}>
-                    <img  style={{height:74, width:64, alignSelf:"end"}} src={stress}/>
+                    <img  style={{height:74, width:64, alignSelf:"end"}} src={burn}/>
                     <label style={{fontSize:50, color:"#9A9AFF"}}><b>15%</b></label>
                     <label style={{textAlign:"left"}}>As the pandemic puts focus on employee health, only 72 million or 15% of India’s overall workforce is covered with corporate health and wellness programs</label>
                 </div>
