@@ -8,7 +8,7 @@ function Faq(){
     return(
         <div style={{backgroundColor:"white", width:"100%",display:"flex", flexDirection:"column", fontFamily:"Poppins"}}>
             <div style={{display:"flex", flexDirection:"column", width:"50%", alignSelf:"center"}}>
-                <div style={{padding:50,display:"flex", flexDirection:"column"}}>
+                <div style={{padding:40,display:"flex", flexDirection:"column"}}>
                     <label style={{fontSize:40}}>Frequently Asked Questions</label>
                     <label style={{color:"#777777"}}>Who are in extremely love with eco friendly system.</label>
 
@@ -43,7 +43,7 @@ function Faq(){
                     </div>
                 </div>
             </div>
-            <div style={{margin:30,display:"flex", flexDirection:"column"}}>
+            <div style={{margin:20,display:"flex", flexDirection:"column"}}>
                 <label style={{fontSize:40}}>Prioritizing Employee Wellness across 10+ organizations</label>
                 <div style={{display:"flex", flexDirection:"row", justifyContent:"center", margin:20}}>
                     <img style={{height:100, width:100}} src={can}/>

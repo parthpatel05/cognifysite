@@ -37,22 +37,50 @@ function Home({}) {
             {/*    </div>*/}
 
             {/*</div>*/}
-            <div style={{width:"100%", backgroundColor:"#9A9AFF", height:800, display:"flex", flexDirection:"row", justifyContent:"center", alignItems:"center"}}>
-                <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", width:540, textAlign:"left"}}>
-                    <label style={{color:"white", fontSize:50}}>
-                        <b>Wellness</b>
-                    </label>
-                    <label style={{color:"white", fontSize:50}}>
-                        <b>Reimagined: Clairon</b>
-                    </label>
-                    <label style={{color:"white", paddingTop:20, paddingBottom:20}}>In today's fast-paced corporate environment, stress, burnout, and lack of employee engagement have become significant challenges for businesses.
-                    </label>
-                    <button style={{backgroundColor:hoverLearn?"#9A9AFF":"white", borderRadius:15, width:150, height:35, borderWidth:0}}
-                            onMouseEnter={() => {setLearn(true)}}
-                            onMouseLeave={() => {setLearn(false)}}><b>Learn More</b></button>
+            {/*<div style={{width:"100%", backgroundColor:"#9A9AFF", height:800, display:"flex", flexDirection:"row", justifyContent:"center", alignItems:"center"}}>*/}
+            {/*    <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start", width:'100%', textAlign:"left"}}>*/}
+            {/*        <label style={{color:"white", fontSize:50}}>*/}
+            {/*            <b>Wellness</b>*/}
+            {/*        </label>*/}
+            {/*        <label style={{color:"white", fontSize:50}}>*/}
+            {/*            <b>Reimagined: Clairon</b>*/}
+            {/*        </label>*/}
+            {/*        <label style={{color:"white", paddingTop:20, paddingBottom:20}}>In today's fast-paced corporate environment, stress, burnout, and lack of employee engagement have become significant challenges for businesses.*/}
+            {/*        </label>*/}
+            {/*        <button style={{backgroundColor:hoverLearn?"#9A9AFF":"white", borderRadius:15, width:150, height:35, borderWidth:0}}*/}
+            {/*                onMouseEnter={() => {setLearn(true)}}*/}
+            {/*                onMouseLeave={() => {setLearn(false)}}><b>Learn More</b></button>*/}
+            {/*    </div>*/}
+            {/*    <img src={phone}/>*/}
+            {/*</div>*/}
+
+
+            {/*, height:800*/}
+            <div style={{width:"100%", backgroundColor:"#9A9AFF", paddingTop:20, paddingBottom:50, display:"flex", flexDirection:"row", justifyContent:"center", alignItems:"center"}}>
+                <div style={{display:"flex", flexDirection:"column",  width:"75%", justifyContent:"center", textAlign: 'left', alignItems: 'center'}}>
+                    <div style={{display: 'flex', flexDirection:"column", width:"50%"}}>
+                        <label style={{color:"white", fontSize:50}}>
+                            <b>Wellness</b>
+                        </label>
+                        <label style={{color:"white", fontSize:50}}>
+                            <b>Reimagined: Clairon</b>
+                        </label>
+                        <label style={{color:"white", paddingTop:20, paddingBottom:20}}>In today's fast-paced corporate environment, stress, burnout, and lack of employee engagement have become significant challenges for businesses.</label>
+                    </div>
+
+                    <div>
+                        <button style={{backgroundColor:hoverLearn?"#9A9AFF":"white", borderRadius:15, width:150, height:35, borderWidth:0}}
+                                onMouseEnter={() => {setLearn(true)}}
+                                onMouseLeave={() => {setLearn(false)}}><b>Learn More</b></button>
+                    </div>
+
                 </div>
-                <img src={phone}/>
+                <div style={{display:"flex", alignItems:"flex-start", width:"50%", flexDirection:"row"}}>
+                    <img src={phone}/>
+                </div>
+
             </div>
+
             {/*<label style={{}}>Hello</label>*/}
         </div>
     );

@@ -141,7 +141,9 @@ function Feature(){
                     showArrows={false}
                     slide={goToSlide}
                 />
+                <div style={{height:20}}>
 
+                </div>
 
             </div>
         </div>

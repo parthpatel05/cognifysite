@@ -18,7 +18,7 @@ function Footer({ref}) {
                     <img style={{padding:15}} src={andriod}/>
                 </div>
             </div>
-            <div style={{backgroundColor:"#222222", display:"flex", flexDirection:"column", padding:80}}>
+            <div style={{backgroundColor:"#222222", display:"flex", flexDirection:"column", padding:50}}>
                 <div style={{display:"flex", flexDirection:"row",color:"white", justifyContent:"center"}}>
                     <div style={{display:"flex", flexDirection:"column", textAlign:"left"}}>
                         <label style={{marginBottom:20}}><b>Information</b></label>
