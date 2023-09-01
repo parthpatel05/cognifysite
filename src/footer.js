@@ -6,20 +6,20 @@ import x from "./assets/x.png"
 import ball from "./assets/ball.png"
 import be from "./assets/be.png"
 
-function Footer({ref}) {
+function Footer({mobile}) {
     return (
-        <div ref={ref} className="home" style={{width:"100%", fontFamily:"Poppins"}}>
+        <div className="home" style={{width:"100%", fontFamily:"Poppins"}}>
             <div style={{padding:50, backgroundColor:"#9A9AFF", display:"flex", flexDirection:"column"}}>
-                <label style={{fontSize:50, color:"white"}}><b>Download This App Today!</b></label>
-                <label style={{color:"white", margin:30}}>With Clarion's innovative solutions, businesses can effectively address and resolve the substantial challenges of stress, burnout, and dwindling employee engagement,
+                <label style={{fontSize:mobile?20:50, color:"white"}}><b>Download This App Today!</b></label>
+                <label style={{color:"white", margin:30,fontSize:mobile?10:null}}>With Clarion's innovative solutions, businesses can effectively address and resolve the substantial challenges of stress, burnout, and dwindling employee engagement,
                     fostering a healthier and more productive work environment in the rapidly evolving corporate landscape.</label>
                 <div style={{display:"flex", flexDirection:"row", width:"100%", justifyContent:"center"}}>
-                    <img style={{padding:15}} src={apple}/>
-                    <img style={{padding:15}} src={andriod}/>
+                    <img style={{padding:15,height:mobile?40:null, width:mobile?100:null}} src={apple}/>
+                    <img style={{padding:15,height:mobile?40:null, width:mobile?100:null}} src={andriod}/>
                 </div>
             </div>
             <div style={{backgroundColor:"#222222", display:"flex", flexDirection:"column", padding:50}}>
-                <div style={{display:"flex", flexDirection:"row",color:"white", justifyContent:"center"}}>
+                <div style={{display:"flex", flexDirection:mobile?"column":"row",color:"white", justifyContent:"center"}}>
                     <div style={{display:"flex", flexDirection:"column", textAlign:"left"}}>
                         <label style={{marginBottom:20}}><b>Information</b></label>
                         <a style={{color:"#FFFFFF", marginTop:10}}>Privacy Policy</a>
@@ -27,7 +27,7 @@ function Footer({ref}) {
                         <a style={{color:"#FFFFFF", marginTop:10}}>Technical Support</a>
                         <a style={{color:"#FFFFFF", marginTop:10}}>Support</a>
                     </div>
-                    <div style={{display:"flex", flexDirection:"column", textAlign:"left", marginRight:100, marginLeft:100}}>
+                    <div style={{display:"flex", flexDirection:"column", textAlign:"left", marginRight:mobile?null:100, marginLeft:mobile?null:100, marginTop:mobile?50:null, marginBottom:mobile?50:null}}>
                         <label style={{marginBottom:20}}><b>Newsletter</b></label>
                         <label style={{color:"#FFFFFF", marginTop:10}}>You can trust us. we only send promo offers, not a single spam.</label>
                         <div style={{display:"flex", flexDirection:"row", marginTop:10}}>
@@ -54,8 +54,8 @@ function Footer({ref}) {
                         </div>
                     </div>
                 </div>
-                <div style={{display:"flex", flexDirection:"row", justifyContent:"center", marginTop:100}}>
-                    <label style={{color:"white", marginRight:520}}>Copyright ©2023 All rights reserved | Clarion</label>
+                <div style={{display:"flex", flexDirection:mobile?"column":"row", justifyContent:"center", marginTop:100}}>
+                    <label style={{color:"white", marginRight:mobile?null:520, marginBottom:mobile?10:null}}>Copyright ©2023 All rights reserved | Clarion</label>
                     <div style={{alignSelf:"end"}}>
                         <img src={facebook}/>
                         <img src={x}/>

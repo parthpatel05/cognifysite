@@ -13,7 +13,7 @@ import up from "./assets/up.png"
 import down from "./assets/down.png"
 import PurchaseModal from "./purchasemodal";
 
-function Price(){
+function Price({mobile}){
     const [feature, setFeature] = useState(true);
 
     const [modalOpen, setModalOpen] = useState(false);
@@ -56,7 +56,7 @@ function Price(){
                             </div>
                             <div style={{padding:30, alignContent:"start",backgroundColor:"white"}}>
                                 {/*<button style={{alignSelf:"end", borderWidth:0, backgroundColor:"black", color:"white", height:40, width:200}}>Purchase Plan</button>*/}
-                                <PurchaseModal plan="1"></PurchaseModal>
+                                <PurchaseModal plan="1" mobile={mobile}></PurchaseModal>
                             </div>
 
                         </div>
@@ -77,7 +77,7 @@ function Price(){
                             </div>
                             <div style={{padding:30, alignContent:"start",backgroundColor:"white"}}>
                                 {/*<button style={{alignSelf:"end", borderWidth:0, backgroundColor:"black", color:"white", height:40, width:200}}>Purchase Plan</button>*/}
-                                <PurchaseModal plan="2"></PurchaseModal>
+                                <PurchaseModal plan="2" mobile={mobile}></PurchaseModal>
                             </div>
 
                         </div>
@@ -98,7 +98,7 @@ function Price(){
                             </div>
                             <div style={{padding:30, alignContent:"start",backgroundColor:"white"}}>
                                 {/*<button style={{alignSelf:"end", borderWidth:0, backgroundColor:"black", color:"white", height:40, width:200}}>Purchase Plan</button>*/}
-                                <PurchaseModal plan="3"></PurchaseModal>
+                                <PurchaseModal plan="3" mobile={mobile}></PurchaseModal>
                             </div>
 
                         </div>
@@ -125,7 +125,7 @@ function Price(){
                     </div>
                     <div style={{padding:30, alignContent:"start",backgroundColor:"white"}}>
                         {/*<button style={{alignSelf:"end", borderWidth:0, backgroundColor:"black", color:"white", height:40, width:200}}>Purchase Plan</button>*/}
-                        <PurchaseModal plan="4"></PurchaseModal>
+                        <PurchaseModal plan="4" mobile={mobile}></PurchaseModal>
                     </div>
 
                     </div>
@@ -146,7 +146,7 @@ function Price(){
                     </div>
                     <div style={{padding:30, alignContent:"start",backgroundColor:"white"}}>
                         {/*<button style={{alignSelf:"end", borderWidth:0, backgroundColor:"black", color:"white", height:40, width:200}}>Purchase Plan</button>*/}
-                        <PurchaseModal plan="5"></PurchaseModal>
+                        <PurchaseModal plan="5" mobile={mobile}></PurchaseModal>
                     </div>
 
                     </div>
@@ -167,7 +167,7 @@ function Price(){
                     </div>
                     <div style={{padding:30, alignContent:"start",backgroundColor:"white"}}>
                         {/*<button style={{alignSelf:"end", borderWidth:0, backgroundColor:"black", color:"white", height:40, width:200}}>Purchase Plan</button>*/}
-                        <PurchaseModal plan="6"></PurchaseModal>
+                        <PurchaseModal plan="6" mobile={mobile}></PurchaseModal>
                     </div>
 
                     </div>

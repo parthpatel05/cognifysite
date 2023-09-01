@@ -12,7 +12,7 @@ import { v4 as uuidv4 } from "uuid";
 import Carousel from "./Carousel";
 
 
-function Feature(){
+function Feature({mobile}){
     const [hoverMed, setHoverMed] = useState(false);
     const [hoverJour, setHoverJour] = useState(false);
     const [hoverBreak, setHoverBreak] = useState(false);
@@ -74,63 +74,63 @@ function Feature(){
     return(
         <div style={{ backgroundColor:"#F9F9FF", width:"100%",display:"flex", flexDirection:"column", fontFamily:"Poppins "}}>
             <div style={{display:"flex", flexDirection:"column", padding:50}}>
-                <label style={{fontSize:50}}><b>Some Features that Made us Unique</b></label>
+                <label style={{fontSize:mobile?20:50}}><b>Some Features that Made us Unique</b></label>
             </div>
             <div style={{display:"flex", flexDirection:"row", justifyContent:"center"}}>
-                <div style={{display:"flex", flexDirection:"column", alignItems:"center", margin:10, height:150,width:380, backgroundColor:hoverMed?"#9A9AFF":"white",paddingTop:5}}
+                <div style={{display:"flex", flexDirection:"column", alignItems:"center", margin:10, height:mobile?120:150,width:380, backgroundColor:hoverMed?"#9A9AFF":"white",paddingTop:5}}
                      onMouseEnter={() => {setHoverMed(true)}}
                      onMouseLeave={() => {setHoverMed(false)}}
                      onClick={() => {medButton()}}
                 >
-                    <img  style={{height:74, width:64, padding:10}} src={med}/>
+                    <img  style={{height:mobile?50:74, width:mobile?43:64, padding:10}} src={med}/>
                     <label style={{padding:10}}><b>Personalized Meditation</b></label>
                 </div>
-                <div style={{display:"flex", flexDirection:"column", alignItems:"center", margin:10, height:150,width:380, backgroundColor:hoverJour?"#9A9AFF":"white",paddingTop:5}}
+                <div style={{display:"flex", flexDirection:"column", alignItems:"center", margin:10, height:mobile?120:150,width:380, backgroundColor:hoverJour?"#9A9AFF":"white",paddingTop:5}}
                      onMouseEnter={() => {setHoverJour(true)}}
                      onMouseLeave={() => {setHoverJour(false)}}
                      onClick={() => {jourButton()}}
                 >
-                    <img  style={{height:74, width:64, padding:10}} src={journal}/>
+                    <img  style={{height:mobile?50:74, width:mobile?43:64, padding:10}} src={journal}/>
                     <label style={{padding:10}}><b>Journaling</b></label>
                 </div>
-                <div style={{display:"flex", flexDirection:"column", alignItems:"center", margin:10, height:150,width:380, backgroundColor:hoverBreak?"#9A9AFF":"white",paddingTop:5}}
+                <div style={{display:"flex", flexDirection:"column", alignItems:"center", margin:10, height:mobile?120:150,width:380, backgroundColor:hoverBreak?"#9A9AFF":"white",paddingTop:5}}
                      onMouseEnter={() => {setHoverBreak(true)}}
                      onMouseLeave={() => {setHoverBreak(false)}}
                      onClick={() => {brkButton()}}
                 >
-                    <img  style={{height:74, width:64, padding:10}} src={brk}/>
+                    <img  style={{height:mobile?50:74, width:mobile?43:64, padding:10}} src={brk}/>
                     <label style={{padding:10}}><b>Brain Breaks</b></label>
                 </div>
             </div>
             <div style={{display:"flex", flexDirection:"row", justifyContent:"center"}}>
-                <div style={{display:"flex", flexDirection:"column", alignItems:"center", margin:10, height:150,width:380, backgroundColor:hoverAna?"#9A9AFF":"white",paddingTop:5}}
+                <div style={{display:"flex", flexDirection:"column", alignItems:"center", margin:10, height:mobile?120:150,width:380, backgroundColor:hoverAna?"#9A9AFF":"white",paddingTop:5}}
                      onMouseEnter={() => {setHoverAna(true)}}
                      onMouseLeave={() => {setHoverAna(false)}}
                     onClick={() => {anaButton()}}
                 >
-                    <img  style={{height:74, width:64, padding:10}} src={ana}/>
+                    <img  style={{height:mobile?50:74, width:mobile?43:64, padding:10}} src={ana}/>
                     <label style={{padding:10}}><b>Analytics</b></label>
                 </div>
-                <div style={{display:"flex", flexDirection:"column", alignItems:"center", margin:10, height:150,width:380, backgroundColor:hoverSch?"#9A9AFF":"white",paddingTop:5}}
+                <div style={{display:"flex", flexDirection:"column", alignItems:"center", margin:10, height:mobile?120:150,width:380, backgroundColor:hoverSch?"#9A9AFF":"white",paddingTop:5}}
                      onMouseEnter={() => {setHoverSch(true)}}
                      onMouseLeave={() => {setHoverSch(false)}}
                     onClick={() => {schButton()}}
                 >
-                    <img  style={{height:74, width:64, padding:10}} src={sch}/>
+                    <img  style={{height:mobile?50:74, width:mobile?43:64, padding:10}} src={sch}/>
                     <label style={{padding:10}}><b>Scheduling</b></label>
                 </div>
-                <div style={{display:"flex", flexDirection:"column", alignItems:"center", margin:10, height:150,width:380, backgroundColor:hoverDesk?"#9A9AFF":"white",paddingTop:5}}
+                <div style={{display:"flex", flexDirection:"column", alignItems:"center", margin:10, height:mobile?120:150,width:380, backgroundColor:hoverDesk?"#9A9AFF":"white",paddingTop:5}}
                      onMouseEnter={() => {setHoverDesk(true)}}
                      onMouseLeave={() => {setHoverDesk(false)}}
                      onClick={() => {exButton()}}
                 >
-                    <img  style={{height:74, width:64, padding:10}} src={desk}/>
+                    <img  style={{height:mobile?50:74, width:mobile?43:64, padding:10}} src={desk}/>
                     <label style={{padding:10}}><b>Desk Exercises</b></label>
                 </div>
             </div>
             <div style={{marginTop:60,display:"flex", flexDirection:"column",alignItems:"center"}}>
-                <label style={{fontSize:30}}>Our Features Showcased</label>
-                <label>Who are in extremely love with eco friendly system.</label>
+                <label style={{fontSize:mobile?15:30}}>Our Features Showcased</label>
+                <label style={{fontSize:mobile?10:null}}>Who are in extremely love with eco friendly system.</label>
 
                 <Carousel
                     cards={slides}

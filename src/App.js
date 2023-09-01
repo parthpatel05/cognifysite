@@ -7,9 +7,24 @@ import Price from "./price";
 import Footer from "./footer";
 import Faq from "./faq";
 import ParallaxScroll from "./parallaxscroll";
-import {useState, useRef} from "react";
+import {useState, useRef, useEffect} from "react";
+import PriceMobile from "./priceMobile";
 
 function App() {
+    // const isMobile = window.matchMedia("(max-width:400px)").matches;
+    const [width, setWidth] = useState(window.innerWidth);
+
+    function handleWindowSizeChange() {
+        setWidth(window.innerWidth);
+    }
+    useEffect(() => {
+        window.addEventListener('resize', handleWindowSizeChange);
+        return () => {
+            window.removeEventListener('resize', handleWindowSizeChange);
+        }
+    }, []);
+
+    const isMobile = width <= 768;
     const [hoverHome, setHoverHome] = useState(false);
     const [hoverSer, setHoverSer] = useState(false);
     const [hoverFea, setHoverFea] = useState(false);
@@ -17,12 +32,16 @@ function App() {
     const [hoverFaq, setHoverFaq] = useState(false);
     const [hoverPage, setHoverPage] = useState(false);
 
+    const homeRef = useRef(null);
     const serviceRef = useRef(null);
     const featureRef = useRef(null);
     const priceRef = useRef(null);
     const faqRef = useRef(null);
     const footerRef = useRef(null);
 
+    const handleClickHome = () => {
+        homeRef.current?.scrollIntoView({ behavior: 'smooth' });
+    };
     const handleClickService = () => {
         serviceRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
@@ -39,59 +58,57 @@ function App() {
         footerRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
+
   return (
+    //top:20, right:50,
     <div className="App" style={{display:"flex", flexDirection:"column"}}>
-      {/*<header className="App-header">*/}
-      {/*  <img src={logo} className="App-logo" alt="logo" />*/}
-      {/*  <p>*/}
-      {/*    Edit <code>src/App.js</code> and save to reload.*/}
-      {/*  </p>*/}
-      {/*  <a*/}
-      {/*    className="App-link"*/}
-      {/*    href="https://reactjs.org"*/}
-      {/*    target="_blank"*/}
-      {/*    rel="noopener noreferrer"*/}
-      {/*  >*/}
-      {/*    Learn React*/}
-      {/*  </a>*/}
-      {/*</header>*/}
-      {/*  <div style={{backgroundColor:"white", height:80}}>*/}
-      {/*      <img style={{position:"absolute",left:20}} src={logo}/>*/}
-      {/*      <div style={{position:"absolute", top:20, right:50, display:"flex", flexDirection:"row"}}>*/}
-      {/*          <div style={{margin:10, color:hoverHome?"#9A9AFF":"black"}}*/}
-      {/*               onMouseEnter={() => {setHoverHome(true)}}*/}
-      {/*               onMouseLeave={() => {setHoverHome(false)}}><label><b>Home</b></label></div>*/}
-      {/*          <div style={{margin:10, color:hoverSer?"#9A9AFF":"black"}}*/}
-      {/*               onMouseEnter={() => {setHoverSer(true)}}*/}
-      {/*               onMouseLeave={() => {setHoverSer(false)}} onClick={handleClickService}><label><b>Service</b></label></div>*/}
-      {/*          <div style={{margin:10, color:hoverFea?"#9A9AFF":"black"}}*/}
-      {/*               onMouseEnter={() => {setHoverFea(true)}}*/}
-      {/*               onMouseLeave={() => {setHoverFea(false)}} onClick={handleClickFeature}><label><b>Feature</b></label></div>*/}
-      {/*          <div style={{margin:10, color:hoverPrice?"#9A9AFF":"black"}}*/}
-      {/*               onMouseEnter={() => {setHoverPrice(true)}}*/}
-      {/*               onMouseLeave={() => {setHoverPrice(false)}} onClick={handleClickPrice}><label><b>Price</b></label></div>*/}
-      {/*          <div style={{margin:10, color:hoverFaq?"#9A9AFF":"black"}}*/}
-      {/*               onMouseEnter={() => {setHoverFaq(true)}}*/}
-      {/*               onMouseLeave={() => {setHoverFaq(false)}} onClick={handleClickFaq}><label><b>FAQ</b></label></div>*/}
-      {/*          <div style={{margin:10, color:hoverPage?"#9A9AFF":"black"}}*/}
-      {/*               onMouseEnter={() => {setHoverPage(true)}}*/}
-      {/*               onMouseLeave={() => {setHoverPage(false)}} onClick={handleClickFooter}><label><b>About Us</b></label></div>*/}
-      {/*      </div>*/}
+        {isMobile?(
+            // <label>Hello</label>
+            <div >
+                <div style={{backgroundColor:"white",position:"absolute", display:"flex", flexDirection:"row", width:"100%"}}>
+                    <img style={{height:"100%", width:"10%", marginLeft:10}} src={logo}/>
+                    <div style={{display:"flex", flexDirection:"row", marginLeft:30}}>
+                        <div style={{margin:10, color:hoverHome?"#9A9AFF":"black"}}
+                             onMouseEnter={() => {setHoverHome(true)}}
+                             onMouseLeave={() => {setHoverHome(false)}} onClick={handleClickHome}><label style={{fontSize:10}}><b>Home</b></label></div>
+                        <div style={{margin:10, color:hoverSer?"#9A9AFF":"black"}}
+                             onMouseEnter={() => {setHoverSer(true)}}
+                             onMouseLeave={() => {setHoverSer(false)}} onClick={handleClickService}><label style={{fontSize:10}}><b>Service</b></label></div>
+                        <div style={{margin:10, color:hoverFea?"#9A9AFF":"black"}}
+                             onMouseEnter={() => {setHoverFea(true)}}
+                             onMouseLeave={() => {setHoverFea(false)}} onClick={handleClickFeature}><label style={{fontSize:10}}><b>Feature</b></label></div>
+                        <div style={{margin:10, color:hoverPrice?"#9A9AFF":"black"}}
+                             onMouseEnter={() => {setHoverPrice(true)}}
+                             onMouseLeave={() => {setHoverPrice(false)}} onClick={handleClickPrice}><label style={{fontSize:10}}><b>Price</b></label></div>
+                        <div style={{margin:10, color:hoverFaq?"#9A9AFF":"black"}}
+                             onMouseEnter={() => {setHoverFaq(true)}}
+                             onMouseLeave={() => {setHoverFaq(false)}} onClick={handleClickFaq}><label style={{fontSize:10}}><b>FAQ</b></label></div>
+                        <div style={{margin:10, color:hoverPage?"#9A9AFF":"black"}}
+                             onMouseEnter={() => {setHoverPage(true)}}
+                             onMouseLeave={() => {setHoverPage(false)}} onClick={handleClickFooter}><label style={{fontSize:10}}><b>About Us</b></label></div>
+                    </div>
 
-      {/*  </div>*/}
+                </div>
 
-        {/*<Home></Home>*/}
-        {/*<label ref={serviceRef}></label>*/}
-        {/*<Service></Service>*/}
-        {/*<label ref={featureRef}></label>*/}
-        {/*<Feature></Feature>*/}
-        {/*<label ref={priceRef}></label>*/}
-        {/*<Price></Price>*/}
-        {/*<label ref={faqRef}></label>*/}
-        {/*<Faq></Faq>*/}
-        {/*<label ref={footerRef}></label>*/}
-        {/*<Footer ></Footer>*/}
-        <ParallaxScroll></ParallaxScroll>
+                <label ref={homeRef}></label>
+                <Home mobile={isMobile}></Home>
+                <label ref={serviceRef}></label>
+                <Service mobile={isMobile}></Service>
+                <label ref={featureRef}></label>
+                <Feature mobile={isMobile}></Feature>
+                <label ref={priceRef}></label>
+                {/*<Price mobile={isMobile}></Price>*/}
+                <PriceMobile mobile={isMobile}></PriceMobile>
+                <label ref={faqRef}></label>
+                <Faq mobile={isMobile}></Faq>
+                <label ref={footerRef}></label>
+                <Footer mobile={isMobile}></Footer>
+            </div>
+        ):(
+            // <label>Bye</label>
+            <ParallaxScroll></ParallaxScroll>
+
+        )}
     </div>
   );
 }

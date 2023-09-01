@@ -1,7 +1,7 @@
 import Popup from "reactjs-popup";
 import {useState} from 'react';
 //isOpen, onClose, plan, children
-function PurchaseModal({plan}){
+function PurchaseModal({plan, mobile}){
 
     const [first, setfirst] = useState('');
     const [last, setlast] = useState('');
@@ -66,7 +66,7 @@ function PurchaseModal({plan}){
                                         <input style={{paddingLeft:10, borderWidth:0, backgroundColor:"black", color:"white", height:40, width:200}}
                                         placeholder="First Name"
                                                onChange={handlefirst}/>
-                                        <input style={{paddingLeft:10, marginLeft:20,borderWidth:0, backgroundColor:"black", color:"white", height:40, width:200}}
+                                        <input style={{paddingLeft:10, marginLeft:mobile?null:20, marginTop:mobile?10:null,borderWidth:0, backgroundColor:"black", color:"white", height:40, width:200}}
                                                placeholder="Last Name"
                                                onChange={handlelast}/>
                                     </div>
@@ -74,7 +74,7 @@ function PurchaseModal({plan}){
                                         <input style={{paddingLeft:10, borderWidth:0, backgroundColor:"black", color:"white", height:40, width:240}}
                                                placeholder="Organization Name"
                                                onChange={handleorgName}/>
-                                        <input style={{paddingLeft:10, marginLeft:20,borderWidth:0, backgroundColor:"black", color:"white", height:40, width:240}}
+                                        <input style={{paddingLeft:10, marginLeft:mobile?null:20, marginTop:mobile?10:null,borderWidth:0, backgroundColor:"black", color:"white", height:40, width:240}}
                                                placeholder="Organization Email"
                                                onChange={handleorgEmail}/>
                                     </div>
@@ -82,7 +82,7 @@ function PurchaseModal({plan}){
                                         <input style={{paddingLeft:10, borderWidth:0, backgroundColor:"black", color:"white", height:40, width:200}}
                                                placeholder="Position"
                                                onChange={handleposition}/>
-                                        <input style={{paddingLeft:10, marginLeft:20,borderWidth:0, backgroundColor:"black", color:"white", height:40, width:200}}
+                                        <input style={{paddingLeft:10, marginLeft:mobile?null:20, marginTop:mobile?10:null, borderWidth:0, backgroundColor:"black", color:"white", height:40, width:200}}
                                                placeholder="Phone Number"
                                                onChange={handlenumber}/>
                                     </div>
