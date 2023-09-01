@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence, useInView } from 'framer-motion';
 import Home from './home';
 import Service from './service';
 import Feature from './feature';
@@ -11,9 +11,9 @@ import logo from "./assets/logo.png";
 const ParallaxScroll = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [previousIndex, setPreviousIndex] = useState(0);
+    const [scrolledUp, setScrolledUp] = useState(false);
+    const [maxScrollY, setMaxScrollY] = useState(0);
 
-    const componentOffsets = [-1, 299, 1299, 2350, 3100]; // Adjust these values based on your layout
-    const componentSticky = [[-1, 300], [1000, 1299], [1675, 2300], [2900, 3099], []];
 
     const [isScrolling, setIsScrolling] = useState(false);
 
@@ -25,12 +25,34 @@ const ParallaxScroll = () => {
     const [hoverFaq, setHoverFaq] = useState(false);
     const [hoverPage, setHoverPage] = useState(false);
 
-    const serviceRef = useRef(null);
-    const featureRef = useRef(null);
-    const priceRef = useRef(null);
-    const faqRef = useRef(null);
-    const footerRef = useRef(null);
+    const homeRef = useRef(null)
+    const homeInView = useInView(homeRef,{amount: 'all'});
 
+    const serviceRef = useRef(null)
+    const serviceInView = useInView(serviceRef, {amount: 'all'});
+
+    const featuresRef = useRef(null)
+    const featuresInView = useInView(featuresRef, {amount: 'all'});
+
+    const priceRef = useRef(null)
+    const priceInView = useInView(priceRef, {amount: 'all'});
+
+    const faqRef = useRef(null)
+    const faqInView = useInView(faqRef, {amount: 'all'});
+
+    const footerRef = useRef(null)
+    const footerInView = useInView(footerRef, {amount: 'all'});
+
+    const componentRefs = [homeRef, serviceRef, featuresRef, priceRef, faqRef, footerRef];
+
+    const showIndex = () => {
+        console.log(scrolledUp);
+    }
+
+    const showIsScrolling = () => {
+        console.log(isScrolling);
+    }
+ 
     const handleClickHome = () => {
         // featureRef.current?.scrollIntoView({ behavior: 'smooth' });
         setPreviousIndex(0)
@@ -62,28 +84,16 @@ const ParallaxScroll = () => {
         setActiveIndex(5)
     };
 
-    // useEffect(() => {
-
-
-    //   window.addEventListener('wheel', scrolled);
-    //   return () => {
-    //     window.removeEventListener('wheel', scrolled);
-    //   };
-    // }, [activeIndex]);
-
     useEffect(() => {
-        console.log(`From use effect ${isScrolling}`);
-    }, [isScrolling]);
-
-    useEffect(() => {
-        console.log(activeIndex);
-        console.log(previousIndex);
         if (activeIndex === 2){
             if (previousIndex === 3){
                 window.scrollTo(0, 700);
+                console.log('scrolled to bottom');
+
                 // alert('hi');
             }else {
                 window.scrollTo(0, 0);
+                console.log('scrolled to top');
             }
         }else{
             window.scrollTo(0, 0);
@@ -91,49 +101,89 @@ const ParallaxScroll = () => {
         }
     }, [activeIndex, previousIndex]);
 
+    useEffect(() => {
+        console.log(scrolledUp);
+    }, [scrolledUp]);
 
+    useEffect(() => {
+        if (activeIndex != 2) {
+            setMaxScrollY(0);
+            return;
+        }
+        const calculateMaxScrollY = () => {
+          const { scrollHeight, clientHeight } = document.documentElement;
+          const maxScroll = scrollHeight - clientHeight;
+          setMaxScrollY(maxScroll);
+        };
+    
+        // Calculate the maximum scroll value whenever activeIndex changes
+        calculateMaxScrollY();
+    
+        // Attach a listener to recalculate the maximum scroll value when the window resizes
+        window.addEventListener('resize', calculateMaxScrollY);
+    
+        // Cleanup: Remove the resize event listener when the component unmounts
+        return () => {
+          window.removeEventListener('resize', calculateMaxScrollY);
+        };
+    }, [activeIndex]);
 
-    // console.log(window.scrollY);
+    
 
     const scrolled = (event) => {
-        // console.log('wheel');
 
+        // console.log(window.scrollY);
+        console.log(event.deltaY);
 
         if (!isScrolling) {
+            
             if (activeIndex !== 2) {
-                setIsScrolling(true);
-                console.log('triggered');
-
+                
+                
                 if (event.deltaY > 0 && activeIndex < 5 ) {
-                    setPreviousIndex(activeIndex)
+                    setIsScrolling(true);
+                    setScrolledUp(true);
+                    setPreviousIndex(activeIndex);
                     setActiveIndex(activeIndex + 1);
+                    setTimeout(() => {
+                        setIsScrolling(false);
+                        // console.log('released');
+                    }, 1500); // 2 second
+                    console.log('scrolled up');
                 } else if (event.deltaY < 0 && activeIndex > 0 ) {
-                    setPreviousIndex(activeIndex)
+                    setIsScrolling(true);
+                    setScrolledUp(false);
+                    setPreviousIndex(activeIndex);
                     setActiveIndex(activeIndex - 1);
+                    setTimeout(() => {
+                        setIsScrolling(false);
+                        // console.log('released');
+                    }, 1500); // 2 second
+                    console.log('scrolled down');
                 }
 
-                setTimeout(() => {
-                    setIsScrolling(false);
-                    console.log('released');
-                }, 3000); // 2 second
             } else if (activeIndex === 2) {
 
                 if (window.scrollY < 10 && event.deltaY < 0) {
                     setIsScrolling(true);
-                    setPreviousIndex(activeIndex)
+                    setScrolledUp(false);
+                    console.log('scrolled down');
+                    setPreviousIndex(2)
                     setActiveIndex(1);
                     setTimeout(() => {
                         setIsScrolling(false);
-                        console.log('released');
-                    }, 3000); // 2 second
-                } else if (window.scrollY > 350 && event.deltaY > 0) {
+                        // console.log('released');
+                    }, 1500); // 2 second
+                } else if (window.scrollY >= maxScrollY && event.deltaY > 0) {
                     setIsScrolling(true);
-                    setPreviousIndex(activeIndex)
+                    setScrolledUp(true);
+                    console.log('scrolled up');
+                    setPreviousIndex(2)
                     setActiveIndex(3);
                     setTimeout(() => {
                         setIsScrolling(false);
-                        console.log('released');
-                    }, 3000); // 2 second
+                        // console.log('released');
+                    }, 1500); // 2 second
                 }
             }
         }
@@ -187,31 +237,10 @@ const ParallaxScroll = () => {
     }
 
     const components = [Home, Service, Feature, Price, Faq, Footer];
-    const ActiveComponent = components[activeIndex];
 
-    const cardVariants = {
-        offscreen: {
-            opacity: 0,
-            // y: '100vh',
-        },
-        onscreen: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                type: "just",
-                duration: 2,
-            }
-        }
-    };
-
-    const showActive = () => {
-        console.log('====================================');
-        console.log(activeIndex);
-        console.log('====================================');
-    }
-
+    // 
     return (
-        <div onWheel={scrolled} >
+        <div style={{position: 'relative', height: activeIndex === 2? '150vh' : '100vh', overflow: 'hidden', backgroundColor:"white" }} onWheel={scrolled} >
              {/*<button onClick={showActive} >Click me</button>*/}
             <div style={{backgroundColor:"white", height:80, position:"sticky"}}>
                 <img style={{position:"absolute",left:20}} src={logo}/>
@@ -236,25 +265,47 @@ const ParallaxScroll = () => {
                          onMouseLeave={() => {setHoverPage(false)}} onClick={handleClickFooter}><label><b>About Us</b></label></div>
                 </div>
 
+                <button onClick={showIndex}>Active</button>
+                <button onClick={showIsScrolling}>isScrolling</button>
+
             </div>
-            {components.map((Component, index) => (
-                <div>
-                    {activeIndex === index && <motion.div
+
+            
+            <div >
+                <AnimatePresence initial={false}>
+                    {components.map((Component, index) => (
+                    <motion.div
                         key={index}
-                        style={index === 2? styles.featureScroll : index === 5? styles.footer : index === 3? styles.priceStyle : styles.normalSticky}
-                        animate={{ opacity: index === activeIndex ? 1 : 0 }}
-                        initial="offscreen"
-                        whileInView="onscreen"
-                        // transition={{ duration: 0.5 }}
+                        // make one of them move up the other move down when we scroll up or down so itll look like the new componnet is pushing the old one out
+                        animate={ 
+                            index === activeIndex?
+                                { opacity: 1, y: 0, transition: {
+                                    duration: .5,
+                                }, }
+                                : index > activeIndex?
+                                { opacity: 0, y: '200vh', transition: {
+                                    duration: index ===2? 1 : 3,
+                                }, }
+                                :
+                                { opacity: 0, y: '-200vh', transition: {
+                                    duration: index ===2? 1 : 3,
+                                }, }
+                        }
+                        style={{
+                            position: 'absolute',
+                            width: '100%',
+                            zIndex: activeIndex === index ? 9999 : 0,
+                            marginTop: '10px',
+                            marginBottom: '10px',
+                        }}
                     >
-                        <motion.div variants={cardVariants}>
-                            <Component />
-                        </motion.div>
-
-                    </motion.div>}
-                </div>
-
-            ))}
+                        <Component />
+                    </motion.div>
+                    ))}
+                </AnimatePresence>
+                
+            </div>
+            
 
         </div>
     );
