@@ -265,8 +265,8 @@ const ParallaxScroll = () => {
                          onMouseLeave={() => {setHoverPage(false)}} onClick={handleClickFooter}><label><b>About Us</b></label></div>
                 </div>
 
-                <button onClick={showIndex}>Active</button>
-                <button onClick={showIsScrolling}>isScrolling</button>
+                {/* <button onClick={showIndex}>Active</button>
+                <button onClick={showIsScrolling}>isScrolling</button> */}
 
             </div>
 
