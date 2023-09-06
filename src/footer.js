@@ -5,6 +5,7 @@ import facebook from "./assets/facebook.png"
 import x from "./assets/x.png"
 import ball from "./assets/ball.png"
 import be from "./assets/be.png"
+import { Link } from 'react-router-dom';
 
 function Footer({mobile}) {
     return (
@@ -22,7 +23,7 @@ function Footer({mobile}) {
                 <div style={{display:"flex", flexDirection:mobile?"column":"row",color:"white", justifyContent:"center"}}>
                     <div style={{display:"flex", flexDirection:"column", textAlign:"left"}}>
                         <label style={{marginBottom:20}}><b>Information</b></label>
-                        <a style={{color:"#FFFFFF", marginTop:10}}>Privacy Policy</a>
+                        <Link style={{color:"#FFFFFF", marginTop:10, textDecoration: 'none'}} to="/policy">Privacy Policy</Link>
                         <a style={{color:"#FFFFFF", marginTop:10}}>Contact Us</a>
                         <a style={{color:"#FFFFFF", marginTop:10}}>Technical Support</a>
                         <a style={{color:"#FFFFFF", marginTop:10}}>Support</a>
