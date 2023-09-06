@@ -57,7 +57,7 @@ function PurchaseModal({plan, mobile}){
                    modal nested>
                 {
                     close => (
-                        <div className='modal' style={{width:"100%" }}>
+                        <div className='modal' style={{width:"100%" , zIndex:900}}>
                             <div style={{display:"flex", flexDirection:"column", width:"100%", alignItems:"center", fontFamily:"Poppins"}}>
                                 <div style={{borderWidth:10, backgroundColor:"white",display:"flex", flexDirection:"column", width:"50%", padding:20}}>
                                     <label style={{fontSize:30}}><b>Contact Information</b></label>

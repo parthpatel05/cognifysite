@@ -294,7 +294,7 @@ const ParallaxScroll = () => {
                         style={{
                             position: 'absolute',
                             width: '100%',
-                            zIndex: activeIndex === index ? 9999 : 0,
+                            zIndex: activeIndex === index ? 99 : 0,
                             marginTop: '10px',
                             marginBottom: '10px',
                         }}
