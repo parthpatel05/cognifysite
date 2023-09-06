@@ -89,7 +89,7 @@ function Home({mobile}) {
                             <b>Wellness</b>
                         </label>
                         <label style={mobile?styles.headerLabelMobile:styles.headerLabel}>
-                            <b>Reimagined: Clairon</b>
+                            <b>Reimagined: Clarion</b>
                         </label>
                         <label style={mobile?styles.desLabelMobile:styles.desLabel}>In today's fast-paced corporate environment, stress, burnout, and lack of employee engagement have become significant challenges for businesses.</label>
                         <button style={mobile?styles.learnMobiles:styles.learn}

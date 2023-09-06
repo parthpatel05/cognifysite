@@ -110,7 +110,7 @@ function Price({mobile}){
                 {/*<img style={{width:200, height:400, padding:5}} src={right}/>*/}
                     <div style={{backgroundColor:"#F9F9FF", margin:10}}>
                     <div style={{display:"flex", flexDirection:"column", padding:30, textAlign:"left",backgroundColor:"white"}}>
-                        <label style={{fontSize:20}}><b>{'>10 Employees'}</b></label>
+                        <label style={{fontSize:20}}><b>{'>50 Employees'}</b></label>
                         <label style={{color:"#777777"}}>For India based</label>
                         <label style={{color:"#777777"}}>Businesses</label>
                         <label style={{position:"absolute",alignSelf:"end", fontSize:30}}><b>₹10000</b></label>
@@ -131,7 +131,7 @@ function Price({mobile}){
                     </div>
                     <div style={{backgroundColor:"#F9F9FF", margin:10}}>
                     <div style={{display:"flex", flexDirection:"column", padding:30, textAlign:"left",backgroundColor:"white"}}>
-                        <label style={{fontSize:20}}><b>{'>20 Employees'}</b></label>
+                        <label style={{fontSize:20}}><b>{'>75 Employees'}</b></label>
                         <label style={{color:"#777777"}}>For India based</label>
                         <label style={{color:"#777777"}}>Businesses</label>
                         <label style={{position:"absolute",alignSelf:"end", fontSize:30}}><b>₹13125</b></label>
@@ -152,7 +152,7 @@ function Price({mobile}){
                     </div>
                     <div style={{backgroundColor:"#F9F9FF", margin:10}}>
                     <div style={{display:"flex", flexDirection:"column", padding:30, textAlign:"left",backgroundColor:"white"}}>
-                        <label style={{fontSize:20}}><b>{'>35 Employees'}</b></label>
+                        <label style={{fontSize:20}}><b>{'>100 Employees'}</b></label>
                         <label style={{color:"#777777"}}>For India based</label>
                         <label style={{color:"#777777"}}>Businesses</label>
                         <label style={{position:"absolute",alignSelf:"end", fontSize:30}}><b>₹15000</b></label>

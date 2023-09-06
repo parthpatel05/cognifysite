@@ -50,7 +50,7 @@ function Service({mobile}){
                 <div style={mobile?styles.serDivMobile:styles.serDiv}>
                     <img  style={{height:mobile?50:74, width:mobile?43:64, alignSelf:"end"}} src={stress}/>
                     <label style={{fontSize:mobile?30:50, color:"#9A9AFF"}}><b>89%</b></label>
-                    <label style={{fontSize:mobile?10:null, textAlign:"left"}}>89% of Indian employees suffer from stress at work</label>
+                    <label style={{fontSize:mobile?10:null, textAlign:"left"}}>According to a survey by the Indian Institute of Stress in 2020, 89% of Indian employees suffer from stress at work.</label>
                 </div>
                 <div style={mobile?styles.serDivMobile:styles.serDiv}>
                     <img  style={{hheight:mobile?50:74, width:mobile?43:64, alignSelf:"end"}} src={prod}/>

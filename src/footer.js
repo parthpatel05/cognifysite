@@ -39,16 +39,16 @@ function Footer({mobile}) {
                         <label style={{marginBottom:20}}><b>Our Team</b></label>
                         <div style={{display:"flex", flexDirection:"row"}}>
                             <div style={{display:"flex", flexDirection:"column", marginRight:10}}>
-                                <a style={{color:"#FFFFFF", marginTop:10}}>Om Mistry</a>
-                                <a style={{color:"#FFFFFF", marginTop:10}}>Ayush Sagar</a>
-                                <a style={{color:"#FFFFFF", marginTop:10}}>Khushin Patel</a>
-                                <a style={{color:"#FFFFFF", marginTop:10}}>Parth Patel</a>
+                                <a href="https://linkedin.com/in/om-clarion" style={{color:"#FFFFFF", marginTop:10}}>Om Mistry</a>
+                                <a href="https://linkedin.com/in/ayush-saggar-96b1ab215" style={{color:"#FFFFFF", marginTop:10}}>Ayush Sagar</a>
+                                <a href="https://linkedin.com/in/khushin-patel-857a481a9" style={{color:"#FFFFFF", marginTop:10}}>Khushin Patel</a>
+                                <a href="https://linkedin.com/in/parth-patel-0907" style={{color:"#FFFFFF", marginTop:10}}>Parth Patel</a>
                             </div>
                             <div style={{display:"flex", flexDirection:"column"}}>
-                                <a style={{color:"#FFFFFF", marginTop:10}}>Prushti Vara</a>
-                                <a style={{color:"#FFFFFF", marginTop:10}}>Jay Patel</a>
-                                <a style={{color:"#FFFFFF", marginTop:10}}>Drashya Sadiwala</a>
-                                <a style={{color:"#FFFFFF", marginTop:10}}>Kruti Thakkar</a>
+                                <a href="https://linkedin.com/in/pushtivora" style={{color:"#FFFFFF", marginTop:10}}>Prushti Vora</a>
+                                <a href="https://linkedin.com/in/jay-patel-527bb1216" style={{color:"#FFFFFF", marginTop:10}}>Jay Patel</a>
+                                <a href="https://linkedin.com/in/drashya-sadiwala-5542a520b" style={{color:"#FFFFFF", marginTop:10}}>Drashya Sadiwala</a>
+                                <a href="https://linkedin.com/in/kruti-thakkar-720771223" style={{color:"#FFFFFF", marginTop:10}}>Kruti Thakkar</a>
                             </div>
 
                         </div>
