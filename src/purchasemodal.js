@@ -1,7 +1,11 @@
 import Popup from "reactjs-popup";
 import {useState} from 'react';
-//isOpen, onClose, plan, children
-function PurchaseModal({plan, mobile}){
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { getDatabase, ref, push } from "firebase/database";
+import { app } from "./firebase";
+
+function PurchaseModal({plan, mobile, app}){
 
     const [first, setfirst] = useState('');
     const [last, setlast] = useState('');
@@ -11,17 +15,34 @@ function PurchaseModal({plan, mobile}){
     const [number, setnumber] = useState('');
     const [text, setText] = useState('');
 
-    function btn(){
-        console.log(plan)
-        console.log(first)
-        console.log(last)
-        console.log(orgName)
-        console.log(orgEmail)
-        console.log(position)
-        console.log(number)
-        console.log(text)
-
-    }
+    function btn() {
+        // Create a reference to the Firebase database
+        const database = getDatabase(app);
+      
+        // Create a reference to the database node where you want to store the data
+        const databaseRef = ref(database, "purchaseRequests");
+      
+        // Create an object with the data you want to send
+        const requestData = {
+          plan: plan,
+          firstName: first,
+          lastName: last,
+          organizationName: orgName,
+          organizationEmail: orgEmail,
+          position: position,
+          phoneNumber: number,
+          descriptionOfInterest: text,
+        };
+      
+        // Push the data to the database
+        push(databaseRef, requestData)
+          .then(() => {
+            console.log("Data sent successfully");
+          })
+          .catch((error) => {
+            console.error("Error sending data: ", error);
+          });
+      }
 
     const handlefirst = (event) => {
         setfirst(event.target.value);

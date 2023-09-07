@@ -67,7 +67,7 @@ function Faq({mobile}){
                 <div style={{display:"flex", flexDirection:"row", justifyContent:"center", margin:20}}>
                     <img style={{height:mobile?50:100, width:mobile?50:100}} src={can}/>
                     <img style={{height:mobile?50:100, width:mobile?100:190}} src={krupal}/>
-                    <img style={{height:mobile?50:100, width:mobile?75:150}} src={land}/>
+                    {/* <img style={{height:mobile?50:100, width:mobile?75:150}} src={land}/> */}
                     <img style={{height:mobile?50:100, width:mobile?50:100}} src={meet}/>
                     <img style={{height:mobile?50:100, width:mobile?50:100}} src={sna}/>
                 </div>
