@@ -210,6 +210,7 @@ function PurchaseModal({ plan, mobile, app }) {
                         {/*    </button>*/}
                         {/*</div>*/}
 
+                        
                     </div>
                 </div>
             }
