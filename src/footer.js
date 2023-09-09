@@ -5,6 +5,8 @@ import facebook from "./assets/facebook.png"
 import x from "./assets/x.png"
 import ball from "./assets/ball.png"
 import be from "./assets/be.png"
+import insta from "./assets/ins.png"
+import linkedIn from "./assets/linkedin.png"
 import { Link } from 'react-router-dom';
 
 function Footer({mobile}) {
@@ -38,6 +40,9 @@ function Footer({mobile}) {
                     </div>
                     <div style={{display:"flex", flexDirection:"column", textAlign:"left"}}>
                         <label style={{marginBottom:20}}><b>Our Team</b></label>
+                        {/*<div style={{backgroundColor:"black", height:400, width:400, alignItems:"center"}}>*/}
+                        {/*    <img src={insta} style={{height:200, width:200, marginTop:100, marginLeft:100}}/>*/}
+                        {/*</div>*/}
                         <div style={{display:"flex", flexDirection:"row"}}>
                             <div style={{display:"flex", flexDirection:"column", marginRight:10}}>
                                 <a href="https://linkedin.com/in/om-clarion" style={{color:"#FFFFFF", marginTop:10}}>Om Mistry</a>
@@ -57,11 +62,17 @@ function Footer({mobile}) {
                 </div>
                 <div style={{display:"flex", flexDirection:mobile?"column":"row", justifyContent:"center", marginTop:100}}>
                     <label style={{color:"white", marginRight:mobile?null:520, marginBottom:mobile?10:null}}>Copyright ©2023 All rights reserved | Clarion</label>
-                    <div style={{alignSelf:"end"}}>
-                        <img src={facebook}/>
-                        <img src={x}/>
-                        <img src={ball}/>
-                        <img src={be}/>
+                    <div style={{alignSelf:"end", height:41}}>
+                        {/*<img src={facebook}/>*/}
+                        {/*<img src={x}/>*/}
+                        {/*<img src={ball}/>*/}
+                        {/*<img src={be}/>*/}
+                        <a href={"https://www.instagram.com/clarionwellness/"}>
+                            <img style={{height:21,width:21, marginRight:10}} src={insta}/>
+                        </a>
+                        <a href={"https://www.linkedin.com/company/clarionwellness/"}>
+                            <img style={{height:21,width:21, marginRight:10}} src={linkedIn}/>
+                        </a>
                     </div>
                 </div>
             </div>
