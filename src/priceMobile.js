@@ -93,7 +93,7 @@ function PriceMobile({mobile}){
             key: uuidv4(),
             content: <div style={{backgroundColor:"#F9F9FF", margin:10}}>
                 <div style={{display:"flex", flexDirection:"column", padding:30, textAlign:"left",backgroundColor:"white"}}>
-                    <label style={{fontSize:17}}><b>{'>10 Employees'}</b></label>
+                    <label style={{fontSize:17}}><b>{'>50 Employees'}</b></label>
                     <label style={{color:"#777777"}}>For India based</label>
                     <label style={{color:"#777777"}}>Businesses</label>
                     <label style={{position:"absolute",alignSelf:"end", fontSize:23}}><b>₹10000</b></label>
@@ -117,7 +117,7 @@ function PriceMobile({mobile}){
             key: uuidv4(),
             content: <div style={{backgroundColor:"#F9F9FF", margin:10}}>
                 <div style={{display:"flex", flexDirection:"column", padding:30, textAlign:"left",backgroundColor:"white"}}>
-                    <label style={{fontSize:17}}><b>{'>20 Employees'}</b></label>
+                    <label style={{fontSize:17}}><b>{'>75 Employees'}</b></label>
                     <label style={{color:"#777777"}}>For India based</label>
                     <label style={{color:"#777777"}}>Businesses</label>
                     <label style={{position:"absolute",alignSelf:"end", fontSize:23}}><b>₹13125</b></label>
@@ -141,7 +141,7 @@ function PriceMobile({mobile}){
             key: uuidv4(),
             content: <div style={{backgroundColor:"#F9F9FF", margin:10}}>
                 <div style={{display:"flex", flexDirection:"column", padding:30, textAlign:"left",backgroundColor:"white"}}>
-                    <label style={{fontSize:17}}><b>{'>35 Employees'}</b></label>
+                    <label style={{fontSize:17}}><b>{'>100 Employees'}</b></label>
                     <label style={{color:"#777777"}}>For India based</label>
                     <label style={{color:"#777777"}}>Businesses</label>
                     <label style={{position:"absolute",alignSelf:"end", fontSize:23}}><b>₹15000</b></label>

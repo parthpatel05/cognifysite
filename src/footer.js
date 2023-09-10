@@ -46,7 +46,7 @@ function Footer({mobile}) {
                                 <a href="https://linkedin.com/in/parth-patel-0907" style={{color:"#FFFFFF", marginTop:10}}>Parth Patel</a>
                             </div>
                             <div style={{display:"flex", flexDirection:"column"}}>
-                                <a href="https://linkedin.com/in/pushtivora" style={{color:"#FFFFFF", marginTop:10}}>Prushti Vora</a>
+                                <a href="https://linkedin.com/in/pushtivora" style={{color:"#FFFFFF", marginTop:10}}>Pushti Vora</a>
                                 <a href="https://linkedin.com/in/jay-patel-527bb1216" style={{color:"#FFFFFF", marginTop:10}}>Jay Patel</a>
                                 <a href="https://linkedin.com/in/drashya-sadiwala-5542a520b" style={{color:"#FFFFFF", marginTop:10}}>Drashya Sadiwala</a>
                                 <a href="https://linkedin.com/in/kruti-thakkar-720771223" style={{color:"#FFFFFF", marginTop:10}}>Kruti Thakkar</a>
